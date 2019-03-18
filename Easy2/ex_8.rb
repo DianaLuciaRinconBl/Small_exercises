@@ -43,16 +43,64 @@
 #     if p then multiply all the integers till input
 # 4. print the result to the screen
 
+# def compute_sum(number)
+#   result = 0
+#   (1..number).each {|num| result+= num}
+#   result
+# end
+#
+# def compute_product(number)
+#   result = 1
+#   (1..number).each {|num| result*= num}
+#   result
+# end
+#
+# def validation(number)
+#   number > 0
+# end
+#
+# def validation_operation(input)
+#   input == "s" || input == "p"
+# end
+#
+# operation = ''
+# integer = ''
+#
+# loop do
+#   loop do
+#   puts "Please enter an integer greater than 0: "
+#   integer = gets.chomp.to_i
+#
+#   break if validation(integer)
+#   puts "This number is not valid"
+#   end
+#
+#   loop do
+#   puts "Enter 's' to compute the sum, or 'p' to compute the product"
+#   operation = gets.chomp
+#
+#   break if validation_operation(operation)
+#   puts "Please make sure your answer is valid"
+#   end
+#
+#   if operation == "s"
+#     sum = compute_sum(integer)
+#     puts "The sum of the integers between 1 and #{integer} is #{sum}"
+#     break
+#   elsif operation == "p"
+#     product = compute_product(integer)
+#     puts "The product of the integers between 1 and #{integer} is #{product}"
+#     break
+#   end
+# end
+
+
 def compute_sum(number)
-  result = 0
-  (1..number).each {|num| result+= num}
-  result
+  (1..number).inject {|result, num| result + num}
 end
 
 def compute_product(number)
-  result = 1
-  (1..number).each {|num| result*= num}
-  result
+  (1..number).inject(1) {|result, num| result * num}
 end
 
 def validation(number)
@@ -93,9 +141,6 @@ loop do
     break
   end
 end
-
-
-
 
 
 
