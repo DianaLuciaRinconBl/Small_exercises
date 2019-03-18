@@ -100,7 +100,7 @@ def compute_sum(number)
 end
 
 def compute_product(number)
-  (1..number).inject(1) {|result, num| result * num}
+  (1..number).inject {|result, num| result * num}
 end
 
 def validation(number)
