@@ -7,7 +7,6 @@ def after_midnight(time)
   else
     time = time[0].to_i * HOUR_MINUTES + time[2].to_i
   end
-  #p time
 end
 
 def before_midnight(time)
@@ -17,7 +16,6 @@ def before_midnight(time)
   else
     time = time[0].to_i * HOUR_MINUTES - time[2].to_i
   end
-  #p time
 end
 
 puts after_midnight('00:00') == 0
