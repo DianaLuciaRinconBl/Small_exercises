@@ -35,8 +35,8 @@ def cleanup(string)
   end
 
   final_string = [ ]
-  new_string.each do |wo| #[" what s", "my", " ", "line "]
-    if wo.split != []
+  new_string.each do |wo|   #[" what s", "my", " ", "line "]
+    if wo.split != [] #this bit compares the 'empty-whitespace only' strings with an empty array 
       final_string << wo
     else
       wo
