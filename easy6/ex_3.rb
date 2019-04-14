@@ -11,9 +11,8 @@ def find_fibonacci_index_by_length(number)
 
     num1 = num2
     num2 = total
-
-
   end
+  
   index
 end
 
